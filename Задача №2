@@ -1,0 +1,13 @@
+def calculate_total_revenue(N, M, X):
+    total_revenue = 0
+    for floor in range(1, N + 1):
+        price = X + ((floor - 1) // M) * 1000
+        total_revenue += price
+    return total_revenue
+
+# Пример использования функции
+N = 30  # Количество этажей
+M = 10  # Каждые M этажей стоимость увеличивается на 1000$
+X = 10000  # Стоимость квартиры на первом этаже
+
+print(calculate_total_revenue(N, M, X))
